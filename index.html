@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section class="section">
+        <h1>Aimtrainer by Marius</h1>
+        <canvas id="canvas"></canvas>
+        <div id="timeOver">
+            <div id="timeBar">
+                <h1><span id="time"></span></h1>
+            </div>
+        </div>
+        <div class="Buttons">
+            <div id="scores">
+                <p id="timer">Timer</p>
+                <p id="counter">Counter</p>
+                <p id="missed">Missed</p>
+            </div>
+            <h1 class="Schwierigkeit">Schwierigkeit</h1>
+            <div>
+                <button>to Easy</button><button>Easy</button><button>Medium</button><button>Hard</button><button>Ultra
+                    Hard</button>
+            </div>
+            <button id="button" type="button" onclick="startGame()">Spiel Starten</button>
+        </div>
+    </section>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
