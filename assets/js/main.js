@@ -9,8 +9,8 @@ const ctx = canvas.getContext("2d");
 
 
 
-canvas.width = 300;
-canvas.height = 300;
+canvas.width = 600;
+canvas.height = 600;
 let buttons = document.getElementsByTagName("button");
 let time = document.getElementById("time");
 let healthBar = document.querySelector("#timeBar");
@@ -19,6 +19,7 @@ let difficulty = 20;
 let positionY = Math.floor(Math.random() * 300);
 let positionX = Math.floor(Math.random() * 300);
 let timer = 0;
+let barTimer = 0;
 let score = 0;
 let miss = 0;
 let gameTime = 0;
@@ -35,14 +36,18 @@ function draw(ctx) {
     a = 0;
     score = 0;
     timer = 0;
+    barTimer = 0;
     stopGame();
     objSpawn(ctx);
-
+    barTimer++;
+    let barX = (barTimer * 1000) / gameTime * 100;
+    let bar = 100 - barX;
+    healthBar.style.width = bar + "%";
     gameTimer = setInterval(() => {
         timer++;
-        let barX = (timer * 1000) / gameTime * 100;
-
-        let bar = 100 - barX;
+        barTimer++;
+        barX = (barTimer * 1000) / gameTime * 100;
+        bar = 100 - barX;
         document.getElementById("timer").innerHTML = "Time: " + timer;
         healthBar.style.width = bar + "%";
     }, 1000);
@@ -136,6 +141,7 @@ stopGame = () => {
     setTimeout(() => {
         // alert("penis");
         ctx.reset();
+        healthBar.style.width = 0;
         if (a == 0) {
             alert(`Glückwunsch du hast ${score} getroffen, ${miss} nicht getroffen!`);
             a++;
