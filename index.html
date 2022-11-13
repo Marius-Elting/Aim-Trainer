@@ -26,8 +26,22 @@
             </div>
             <h1 class="Schwierigkeit">Schwierigkeit</h1>
             <div>
-                <button>to Easy</button><button>Easy</button><button>Medium</button><button>Hard</button><button>Ultra
-                    Hard</button>
+                <button>to Easy</button>
+                <button>Easy</button>
+                <button>Medium</button>
+                <button>Hard</button>
+                <button>Ultra Hard</button>
+                <button>Custom</button>
+            </div>
+            <div id="customGame">
+                <label for="">
+                    <p>Größe der Ziele</p><input id="größeRange" type="range" min="1" max="100" value="50">
+                    <p id="größeOutput">50</p>
+                </label>
+                <label for="">
+                    <p>Zeit in sec.</p><input type="range" id="timeRange" min="10" max="600" value="30">
+                    <p id="timeOutput">30</p>
+                </label>
             </div>
             <button id="button" type="button" onclick="startGame()">Spiel Starten</button>
         </div>

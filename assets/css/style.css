@@ -87,7 +87,8 @@ button {
     transform-origin: top left;
     transition: .2s;
     transform: ease-out will-change transform;
-    border: 2px solid transparent;
+    border: 4px solid transparent;
+
 }
 
 button:hover h1 {
@@ -167,3 +168,36 @@ button:hover {
     top: 250px;
     text-align: center;
     width: 100%; */
+
+label {
+    display: none;
+}
+
+
+#customGame {
+    display: grid;
+    grid-template-areas:
+        "größetxt zeittxt"
+        "größeslider zeitslider"
+        "größeout zeitout";
+    gap: 20px
+}
+
+#customGame label {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* #timeOutput {
+    grid-area: zeitout;
+}
+
+#größeOutput {
+    grid-area: größeout;
+}
+
+#timeRange {
+    grid
+} */
